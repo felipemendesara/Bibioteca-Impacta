@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsp-filter-3.0.0.rc-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-2.2.8.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/standard-2.2.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.servlet-api-3.1.0.jar" sourcepath="C:/Users/andré.rezende/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jsp-api-2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/servlet-api-2.5.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_101">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
