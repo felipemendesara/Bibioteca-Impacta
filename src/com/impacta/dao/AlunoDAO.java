@@ -8,5 +8,6 @@ public interface AlunoDAO {
 	public void alterarAluno(Aluno aluno);
 	public List<Aluno> todosAlunos();
 	public Aluno alunoPorId(int alunoId);
+	public Aluno login(String ra,String senha);
 }
 // Interface que vai ser implementada por esta classe

@@ -48,33 +48,7 @@
 		</div><!-- /.container-fluid -->
 	</nav>
 		
-		<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
-		<ul class="nav menu">
-		
-		<li role="presentation" class="divider"></li>
-			<li><a href="AlunoController?action=insert"><svg class="glyph landed books"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar Aluno</a></li>
-			<li><a href="AlunoController?action=listarAluno"><svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg> Listar Alunos Cadastrados</a></li>
-				
-			<li role="presentation" class="divider"></li>
-
-
-	<li role="presentation" class="divider"></li>
-			<li><a href="ProfessorController?action=insert"><svg class="glyph landed books"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar Professor</a></li>
-			<li><a href="ProfessorController?action=listarProfessor"><svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg> Listar Professores</a></li>
-				
-			<li role="presentation" class="divider"></li>
-			
-				<li role="presentation" class="divider"></li>
-			<li><a href="LivroController?action=insert"><svg class="glyph landed books"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar Livro</a></li>
-			<li><a href="LivroController?action=listarLivro"><svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg> Listar Livros</a></li>
-				
-			<li role="presentation" class="divider"></li>
-				<li><a href="UsuarioController?action=insert"><svg class="glyph landed books"><use xlink:href="#stroked-pencil"></use></svg> Cadastrar Usuário</a></li>
-			<li><a href="UsuarioController?action=listarUsuario"><svg class="glyph stroked table"><use xlink:href="#stroked-table"/></svg> Listar Usuário</a></li>
-			
-		</ul>
-
-	</div><!--/.sidebar-->
+<jsp:include page="navbar.jsp" />
 		
 	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
 		<div class="row">

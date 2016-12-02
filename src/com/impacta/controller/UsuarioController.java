@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+
+
+import com.impacta.dao.AlunoDAOImplementation;
+import com.impacta.dao.EcontraAluno;
 import com.impacta.dao.UsuarioDAOImplementation;
 import com.impacta.dao.UsuarioDAO;
 import com.impacta.model.Usuario;
@@ -17,6 +21,7 @@ import com.impacta.model.Usuario;
 @WebServlet("/UsuarioController")
 public class UsuarioController extends HttpServlet {
 	private UsuarioDAO dao;
+	private AlunoDAOImplementation alunos;
     private static final long serialVersionUID = 1L;
     public static final String LISTAR_USUARIO = "/listarUsuario.jsp";
     public static final String INSERIR_OU_DELETAR = "/usuario.jsp";
@@ -25,6 +30,7 @@ public class UsuarioController extends HttpServlet {
  
     public UsuarioController() {
         dao = new UsuarioDAOImplementation ();
+        alunos = new AlunoDAOImplementation();  
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String forward = "";
@@ -51,6 +57,11 @@ public class UsuarioController extends HttpServlet {
         else if( action.equalsIgnoreCase( "login" ) ) {
             forward = LOGIN;
             request.setAttribute("usuario", dao.todosUsuarios());
+        }
+        else if(action.equalsIgnoreCase( "logar" )) {
+        	EcontraAluno econtraAluno = new EcontraAluno(alunos, null, dao);
+            econtraAluno.encontra(request, response);
+            forward = LOGIN;
         }
         else if( action.equalsIgnoreCase( "teste" ) ) {
             forward = TESTE;

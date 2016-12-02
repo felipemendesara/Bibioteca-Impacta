@@ -48,6 +48,7 @@ public class AlunoController extends HttpServlet {
             forward = INSERIR_OU_DELETAR;
         }
         else if( action.equalsIgnoreCase( "login" ) ) {
+        	
             forward = LOGIN;
             request.setAttribute("aluno", dao.todosAlunos());
         }

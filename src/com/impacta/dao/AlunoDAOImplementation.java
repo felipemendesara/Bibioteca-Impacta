@@ -114,6 +114,30 @@ public class AlunoDAOImplementation implements AlunoDAO {
 	        }
 	        return student;
 	}
+	
+	@Override
+	public Aluno login(String ra, String senha) {
+		Aluno student = new Aluno();
+	        try {
+	            String query = "select * from aluno where ra=? and senha=?";
+	            PreparedStatement preparedStatement = conn.prepareStatement( query );
+	            preparedStatement.setString(1, ra);
+	            preparedStatement.setString(2, senha);
+	            ResultSet resultSet = preparedStatement.executeQuery();
+	            while( resultSet.next() ) {
+	                student.setAlunoId( resultSet.getInt( "alunoId" ) );
+	                student.setNomeAluno( resultSet.getString( "nomeAluno" ) );
+	                student.setRA( resultSet.getString( "ra" ) );
+	                student.setSenha( resultSet.getString( "senha" ) );
+	                student.setIdade( resultSet.getInt( "idade" ) );
+	            }
+	            resultSet.close();
+	            preparedStatement.close();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+	        return student;
+	}
 
 	
 }

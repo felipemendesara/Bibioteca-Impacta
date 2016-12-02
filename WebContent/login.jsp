@@ -137,25 +137,19 @@ footer {
 <body>
   <div class='preload login--container'>
   <div class='login--form'>
+  <form action="/Biblioteca/UsuarioController">
+  <input type="hidden" name="action" value="logar" />
     <div class='login--username-container'>
       <label>Usuário</label>
-      <input autofocus placeholder='RA' type='text'>
+      <input name="ra" autofocus placeholder='RA' type='text'>
     </div>
     <div class='login--password-container'>
       <label>Senha</label>
-      <input placeholder='Senha' type='password'>
-      <a style="  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
-  border: none;
-  border-radius: 2px;
-  background-color: #f15a5a;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-  color: white;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.45);" class='js-toggle-login login--login-submit' href="AlunoController?action=listarAluno">Entrar</a>
+      <input name="senha" placeholder='Senha' type='password'>
+     <button type="submit">LOGAR</button>
 
     </div>
+    </form>
   </div>
   <div class='login--toggle-container'>
     <small>BIBLIOTECA IMPACTA TECNOLOGIA</small>
